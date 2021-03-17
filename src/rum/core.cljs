@@ -329,7 +329,7 @@
       (let [local-state (atom initial)]
         (add-watch local-state key
                    (fn [_ _ p n]
-                     (let [component ^js (some-> (aget (:rum/react-component state) "state" ":rum/state") cljs.core/deref :rum/react-component)]
+                     (let [component ^js (some-> (aget (:rum/react-component state) "state") (aget ":rum/state") cljs.core/deref :rum/react-component)]
                        (when (and component (not= p n))
                          (.forceUpdate component)))))
         (assoc state key local-state)))}))
