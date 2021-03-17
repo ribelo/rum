@@ -18,7 +18,7 @@
     (fn [acc m]
       (reduce
        (fn [acc k]
-         (if-let [v (-> m (.get k) (.get k))]
+         (if-let [v (.get m k)]
            (conj! acc v)
            acc))
        acc

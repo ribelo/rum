@@ -3,7 +3,7 @@
   (:require
    [rum.cursor :as cursor]
    [rum.server-render :as render]
-   [rum.util :refer [collect collect* call-fns]]
+   [rum.util :refer [collect collect* call-fns into-all]]
    [rum.derived-atom :as derived-atom]
    [daiquiri.compiler :as compiler]
    [clojure.string :as s]
